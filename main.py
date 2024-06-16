@@ -1,7 +1,7 @@
 import re
 import os
 import time
-from dotenv import load_dotenv, dotenv_values
+from dotenv import load_dotenv
 from langchain_core.messages import AIMessage, HumanMessage
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
