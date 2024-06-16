@@ -10,7 +10,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_groq import ChatGroq
 import streamlit as st
 
-load_dotenv(".env")
+load_dotenv("key.env")
 
 
 def init_database(user, password, host, port, database) -> SQLDatabase:
