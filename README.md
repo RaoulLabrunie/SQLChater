@@ -27,6 +27,5 @@ After installing these libraries, you should be able to run the code without iss
 
 Add your keys in the .env file and install the libraries 
 
-bash
 pip install python-dotenv langchain-core langchain-community langchain-groq streamlit
 
