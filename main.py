@@ -26,13 +26,13 @@ def get_sql_chain(db):
     template = """
     Based on the table schema below, write an SQL query that would answer the user's question. 
     Take into account the conversation history.
-    Additionally, knowing that you work in collaboration with the website sportiw, you will provide the link to each profile.
+    Additionally, knowing that you work in collaboration with the website x, you will provide the link to each profile.
     <SCHEMA>{schema}</SCHEMA>
     Conversation history: {chat_history}
     Write only SQL and nothing else. Do not wrap the SQL query in any other text, not even in backticks.
     Example:
     Question: Give me 10 pivots who have played in NCAA wich height is higher than 2 meters and a free throw statistic greater than 50?
-    SQL Query: SELECT DISTINCT u.Firstname, u.Lastname, u.Height, pe.GameFreeThrowsStatistic, CONCAT('https://sportiw.com/en/athletes/', REPLACE(CONCAT(u.Lastname, '.', u.Firstname), ' ', '%20'), '/', p.ProfileID) AS link FROM users u JOIN profile p ON u.ID = p.userID JOIN profile_experiences pe ON p.ProfileID = pe.ProfileID WHERE p.position = 'Center (C)' AND pe.League LIKE '%NCAA%' AND u.Height > 200 AND pe.GameFreeThrowsStatistic > 50 ORDER BY pe.GameFreeThrowsStatistic DESC LIMIT 15;
+    SQL Query: SELECT DISTINCT u.Firstname, u.Lastname, u.Height, pe.GameFreeThrowsStatistic FROM users u JOIN profile p ON u.ID = p.userID JOIN profile_experiences pe ON p.ProfileID = pe.ProfileID WHERE p.position = 'Center (C)' AND pe.League LIKE '%NCAA%' AND u.Height > 200 AND pe.GameFreeThrowsStatistic > 50 ORDER BY pe.GameFreeThrowsStatistic DESC LIMIT 15;
     Your turn:
     Question: {question}
     SQL Query:
