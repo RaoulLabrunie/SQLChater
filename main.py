@@ -115,10 +115,10 @@ with st.sidebar:
     )
 
     st.text_input("Host", value="localhost", key="Host")
-    st.text_input("Port", value="3306", key="Port")
-    st.text_input("Username", value="root", key="User")
-    st.text_input("Password", type="password", value="asir", key="Password")
-    st.text_input("Database", value="terminado", key="Database")
+    st.text_input("Port", value="0000", key="Port")
+    st.text_input("Username", value="youruser", key="User")
+    st.text_input("Password", type="password", value="yourpassword", key="Password")
+    st.text_input("Database", value="yourdatabase", key="Database")
 
     if st.button("Connect"):
         try:
