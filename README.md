@@ -12,7 +12,7 @@ langchain-groq: For integration with the ChatGroq model.
 streamlit: For building the web user interface.
 To install these libraries, you can use the following pip command:
 
-
+Here is a summary of each library and how they are used in the code:
 
 time: A standard Python library for handling time-related operations.
 dotenv: Used to load environment variables from a .env file.
@@ -28,6 +28,5 @@ After installing these libraries, you should be able to run the code without iss
 Add your keys in the .env file and install the libraries 
 
 bash
-Copiar código
 pip install python-dotenv langchain-core langchain-community langchain-groq streamlit
-Here is a summary of each library and how they are used in the code:
+
